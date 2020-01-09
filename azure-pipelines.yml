@@ -1,6 +1,12 @@
 # Docker
 - task: Docker@2
   inputs:
+    containerRegistry: 'testing-mvc'
+    repository: 'product-store-mvc'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+- task: Docker@2
+  inputs:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 # Build a Docker image 
